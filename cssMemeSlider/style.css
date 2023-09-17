@@ -10,38 +10,46 @@ body {
 
 .slider {
     margin: 0 auto;
-    padding: 50px;
-    width: 1000px;
+    padding: 5%;
+    width: 80vw;
 }
 
 .memes {
-    width: 100%;
+    border-radius: 5%;
+    width: 80vw;
     display: flex;
     overflow: hidden;
     height: 50vh;
 }
-
+.meme{
+width: 100%;
+}
 .texts-dots {
     width: 100%;
     display: flex;
-    /* flex-direction: row-reverse;*/
-    justify-content: space-between; 
+    flex-direction: row-reverse;
+    justify-content: right;
 }
+
 #dot1:checked~.img1 {
+    z-index: 1;
     order: 0;
     animation: ani 1s;
  }
 #dot2:checked~.img2 {
+    z-index: 1;
    order: -1;
    animation: ani 1s;
 }
 #dot3:checked~.img3 {
+    z-index: 1;
     order: -2;
     animation: ani 1s;
  }
  #dot4:checked~.img4 {
+    z-index: 1;
     order: -2;
-    animation: ani 1s ;
+    animation: ani 1s;
  }
 @keyframes ani {
   0% {opacity: 0;}
@@ -50,15 +58,55 @@ body {
 .lable {
     margin: 5px;
     padding: 10px;
-    background-color: blue;
 cursor: pointer;
 }
-
+.lable-dots{
+    display: flex;
+}
 .img {
-    width: 1000px;
+    opacity: 0;
+    width: 400%;
     height: 100%;
+}
+.img:last-child{
+    opacity: 1;
 }
 .dot {
     display: none;
 }
+.lable-dot{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: rgb(81, 27, 27);
+    /* border: 2px solid rgb(81, 27, 27); */
+}
+.lable:hover>.lable-dot{
+    background-color: rgb(160, 117, 117);
+}
 
+/* label[for="dot1"]~.lable1
+#dot2:checked~.lable2
+#dot3:checked~.lable3
+#dot4:checked~.lable4{
+    border: 2px solid rgb(81, 27, 27);
+    background-color: white;
+} */
+.text{
+
+    font-size: 25px;
+}
+.text2,
+.text3,
+.text1{
+    opacity: 0;
+}
+@media (max-width:700px) {
+.texts-dots{
+    flex-direction: column;
+}
+.lable-dots{
+    justify-content: center;
+    display: flex;
+}
+}
