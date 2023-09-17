@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+   
+}
+body{
+ background-color: aqua;
+}
+.slider{
+   margin: 0 auto;
+   padding: 50px;
+   max-width: 1000px;
+}
+
+.memes{
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    height: 600px;
+}
+.texts-dots{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+#dot2:checked ~.img1{
+    display: none;
+}
+.lable{
+    padding: 10px;
+    background-color:blue;
+    
+}
