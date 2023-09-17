@@ -80,10 +80,13 @@ cursor: pointer;
 }
 .lable:hover>.lable-dot{
     background-color: rgb(160, 117, 117);
+    
+}
+.lable:active>.lable-dot{
+    background-color: rgb(34, 27, 27);
 }
 
 .text{
-
     font-size: 2rem;
 }
 .text2,
@@ -91,10 +94,14 @@ cursor: pointer;
 .text1{
     display: none;
 }
-.text-img{
-}
 
 @media (max-width:700px) {
+    .memes {
+        height: 35vh;
+    }
+    .text{
+        font-size: 1.7rem;
+    }
 .texts-dots{
     flex-direction: column;
 }
