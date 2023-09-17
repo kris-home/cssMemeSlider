@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-
 }
 
 body {
@@ -56,8 +55,7 @@ width: 100%;
   100% {opacity: 1;}
 }
 .lable {
-    margin: 5px;
-    padding: 10px;
+    padding: 0.5rem;
 cursor: pointer;
 }
 .lable-dots{
@@ -75,26 +73,18 @@ cursor: pointer;
     display: none;
 }
 .lable-dot{
-    width: 15px;
-    height: 15px;
+    width: 1rem;
+    height: 1rem;
     border-radius: 50%;
     background-color: rgb(81, 27, 27);
-    /* border: 2px solid rgb(81, 27, 27); */
 }
 .lable:hover>.lable-dot{
     background-color: rgb(160, 117, 117);
 }
 
-/* label[for="dot1"]~.lable1
-#dot2:checked~.lable2
-#dot3:checked~.lable3
-#dot4:checked~.lable4{
-    border: 2px solid rgb(81, 27, 27);
-    background-color: white;
-} */
 .text{
 
-    font-size: 25px;
+    font-size: 2rem;
 }
 .text2,
 .text3,
