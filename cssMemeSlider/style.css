@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color:rgb(232, 222, 209);
+}
+
+.slider {
+    margin: 0 auto;
+    padding: 5%;
+    width: 80vw;
+}
+
+.memes {
+    border-radius: 5%;
+    width: 80vw;
+    display: flex;
+    overflow: hidden;
+    height: 50vh;
+}
+.meme{
+width: 100%;
+}
+.texts-dots {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+#dot1:checked~.img1 {
+    z-index: 1;
+    order: 0;
+    animation: ani 1s;
+ }
+#dot2:checked~.img2 {
+    z-index: 1;
+   order: -1;
+   animation: ani 1s;
+}
+#dot3:checked~.img3 {
+    z-index: 1;
+    order: -2;
+    animation: ani 1s;
+ }
+ #dot4:checked~.img4 {
+    z-index: 1;
+    order: -2;
+    animation: ani 1s;
+ }
+@keyframes ani {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+.lable {
+    padding: 0.5rem;
+cursor: pointer;
+}
+.lable-dots{
+    display: flex;
+}
+.img {
+    opacity: 0;
+    width: 400%;
+    height: 100%;
+}
+.img:last-child{
+    opacity: 1;
+}
+.dot {
+    display: none;
+}
+.lable-dot{
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: rgb(81, 27, 27);
+}
+.lable:hover>.lable-dot{
+    background-color: rgb(160, 117, 117);
+    
+}
+.lable:active>.lable-dot{
+    background-color: rgb(34, 27, 27);
+}
+
+.text{
+    font-size: 2rem;
+}
+.text2,
+.text3,
+.text1{
+    display: none;
+}
+
+@media (max-width:700px) {
+    .memes {
+        height: 35vh;
+    }
+    .text{
+        font-size: 1.7rem;
+    }
+.texts-dots{
+    flex-direction: column;
+}
+.lable-dots{
+    justify-content: center;
+    display: flex;
+}
+}
