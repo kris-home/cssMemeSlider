@@ -1,33 +1,64 @@
-*{
+* {
     margin: 0;
     padding: 0;
-   
-}
-body{
- background-color: aqua;
-}
-.slider{
-   margin: 0 auto;
-   padding: 50px;
-   max-width: 1000px;
+
 }
 
-.memes{
+body {
+    background-color:rgb(232, 222, 209);
+}
+
+.slider {
+    margin: 0 auto;
+    padding: 50px;
+    width: 1000px;
+}
+
+.memes {
     width: 100%;
     display: flex;
     overflow: hidden;
-    height: 600px;
+    height: 50vh;
 }
-.texts-dots{
+
+.texts-dots {
+    width: 100%;
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
+    /* flex-direction: row-reverse;*/
+    justify-content: space-between; 
 }
-#dot2:checked ~.img1{
+#dot1:checked~.img1 {
+    order: 0;
+    animation: ani 1s;
+ }
+#dot2:checked~.img2 {
+   order: -1;
+   animation: ani 1s;
+}
+#dot3:checked~.img3 {
+    order: -2;
+    animation: ani 1s;
+ }
+ #dot4:checked~.img4 {
+    order: -2;
+    animation: ani 1s ;
+ }
+@keyframes ani {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+.lable {
+    margin: 5px;
+    padding: 10px;
+    background-color: blue;
+cursor: pointer;
+}
+
+.img {
+    width: 1000px;
+    height: 100%;
+}
+.dot {
     display: none;
 }
-.lable{
-    padding: 10px;
-    background-color:blue;
-    
-}
+
